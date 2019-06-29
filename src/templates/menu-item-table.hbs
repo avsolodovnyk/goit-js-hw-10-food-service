@@ -1,0 +1,28 @@
+<table class="js-table" style="width:100%">
+    <tr>
+        <th width="10%">Блюдо</th>
+        <th>Фото</th>
+        <th width="40%">Описание</th>
+        <th width="10%">Стостав</th>
+        <th width="10%">Цена</th>
+        <th width="10%">Заказать</th>
+    </tr>
+    {{#each this}}
+    <tr>
+        <td id="{{id}}"> {{name}}</td>
+        <td><img src="{{image}}" width="150px"></td>
+        <td>{{description}}</td>
+        <td>
+            <ul>{{#each ingredients}}
+                <li class=" tag-list__item">{{this}}</li>{{/each}}</ul>
+        </td>
+        <td>{{price}}</td>
+        <td>
+            <button class="card__button button">
+                <i class="material-icons button__icon">
+                    shopping_cart
+                </i>
+                В корзину
+            </button></td>
+        {{/each}}
+    </tr>
